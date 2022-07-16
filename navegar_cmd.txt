@@ -1,0 +1,62 @@
+navegar pelo cmd
+cd : entra numa pasta
+cd .. : retorna a pasta anterior
+dir : lista os diretorios presentes na pasta
+mkdir : cria um diretorio na pasta
+del "pasta": deleta tudo dentro da pasta 
+rmdir : deleta a pasta e tudo que tem dentro
+echo "escreve": escreve e imprime algo que você manda
+echo "escreve" > "escreve.txt" : imprime o que você escreveu na pasta no formato que você designou, nesse caso txt
+cls : limpa a tela
+tecla tab : completa palavras
+cd / : leva pra base do diretorio, no caso C
+
+
+------------------------
+SHA1 : criptografa seu arquivo. Gera um conjunto ÚNICO de caracteres de 40 digitos. Identifica de maneira segura
+
+openss1 "sha1": especifica que quer usar o sha1
+
+echo 'conteudo' | git hash-object --stdin : vai escrever conteudo e codificar e entregar a encriptação
+
+echo -e 'conteudo' | openssl sha1 : vai fazer a mesma coisa do anterior, mas entrega um valor diferente de encriptação, pois ele tá pegando todos os metadados presentes no blob
+
+echo -e 'blob 9\0conteudo' | openssl sha1 : vai escrever 'conteudo' mas ignorando os metadados, sendo assim, quando encriptar vai achar a mesma coisa do primeiro echo
+
+-------
+tree armazena blob, tbm tem metadados(\0), guarda o nome do arquivo. Monta a estrutura de onde está os arquivos. Apontam pra blobs ou pra outras àrvores
+
+------------
+commit: aponta pra tree, parente (ultimo commit antes dele), autor, mensagem. Tbm possui criptação, se alterar um dado da blob,
+--------------
+
+cd /c/....... : vai para a pasta que você tá escrevendo, nesse caso alguma pasta no diretorio c
+ls  : você lista as coisas que tem nesse diretorio
+
+cat "arquivo" : você abre o conteudo do arquivo
+
+CHAVES SSH: VOCÊ GERA UM PAR DE CHAVES, SEMPRE GUARDE A PRIVADA PARA VOCÊ E A PUBLICA VOCÊ EXPOE
+
+pwd : mostra o caminho completo de onde você tá
+
+eval $(ssh-agent -s) : tá startando um projeto, ssh-agent tá rodando de plano de fundo. Gera um agente que será entregue ao criptografado privado
+
+voê quer entregar a chave privada, por estar no mesmo diretorio (.ssh) voê pode fazer o comando:
+ssh-add id_25519
+
+token do git: "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"
+-----------------------------------
+iniciar repositorio do git: git init
+adicionar repositorio: git add
+git commit
+todo comando do git leva o nome do git na frente
+
+ls -a: vê o que tem de oculto
+untracked: git ainda não sabe dele
+modified: é unmod q sofreu alteração
+staged: 
+
+limpar tela: ctrl + L
+
+git add * : adiciona tudo que foi modificado
+git commit -m "comentario do que foi feito": faz o commit das mudanças e escreve o que foi feito
